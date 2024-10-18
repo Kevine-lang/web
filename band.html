@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</itle>The Rock Band</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<header>
+    <h1>The Rock Band</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#albums">Albums</a></li>
+            <li><a href="#tour">Tour Dates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="band-info" id="about">
+    <h2>About The Band</h2>
+    <p>We are The Rock Band, bringing you the best rock music from around the world. Formed in 2010, we've been touring and releasing chart-topping hits ever since!</p>
+</section>
+
+<section class="albums" id="albums">
+    <h2>Our Albums</h2>
+    <img id="album-cover" src="album1.jpg" alt="Album 1" class="album-cover">
+</section>
+
+<section class="tour-dates" id="tour">
+    <h2>Tour Dates</h2>
+    <table class="tour-table">
+        <tr>
+            <th>Date</th>
+            <th>City</th>
+            <th>Venue</th>
+        </tr>
+        <tr>
+            <td>Oct 15, 2024</td>
+            <td>New York</td>
+            <td>Madison Square Garden</td>
+        </tr>
+        <tr>
+            <td>Nov 01, 2024</td>
+            <td>Los Angeles</td>
+            <td>The Forum</td>
+        </tr>
+    </table>
+</section>
+
+<section class="contact-form" id="contact">
+    <h2>Contact Us</h2>
+    <form action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 The Rock Band. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // JavaScript code to create an automatic image slideshow
+    let albumImages = ["album1.jpg", "album2.jpg", "album3.jpg"]; // Add more album images if you want
+    let currentIndex = 0;
+
+    function changeAlbumCover() {
+        currentIndex = (currentIndex + 1) % albumImages.length; // Increment the index and loop back to 0
+        document.getElementById("album-cover").src = albumImages[currentIndex];
+    }
+
+    setInterval(changeAlbumCover, 3000); // Change image every 3 seconds
+</script>
+
+</body>
+</html>
